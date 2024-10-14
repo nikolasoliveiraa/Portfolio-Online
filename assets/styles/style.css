@@ -32,6 +32,7 @@ header{
 .logo{
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .logo h1{
@@ -254,9 +255,9 @@ span{
     }
 }
 
-@media(min-width:400px){
+@media(max-width:400px){
     .home-content h1{
-        font-size: 2rem; 
+        min-width: 1rem;
     }
 }
 
