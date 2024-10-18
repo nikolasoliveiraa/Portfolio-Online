@@ -255,13 +255,19 @@ span{
     }
 }
 
-@media(max-width:400px){
-    .home-content h1{
-        min-width: 1rem;
-        font-size: 1rem
+@media (max-width: 400px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+
+    span {
+        font-size: 1rem;
     }
 }
-
 /*body*/
 
 
