@@ -257,19 +257,19 @@ span{
 
 @media (max-width: 430px) {
     .home-content h1 {
-        font-size: 2rem;
-    }
-
-    .home-content h3 {
         font-size: 1.5rem;
     }
 
+    .home-content h3 {
+        font-size: 1rem;
+    }
+
     span {
-        font-size: 3rem;
+        font-size: 2rem;
     }
     
     .footerBottom span{
-        font-size: 3rem;
+        font-size: 1rem;
     }
 }
 /*body*/
