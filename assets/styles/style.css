@@ -267,6 +267,10 @@ span{
     span {
         font-size: 3rem;
     }
+    
+    .footerBottom span{
+        font-size: 3rem;
+    }
 }
 /*body*/
 
