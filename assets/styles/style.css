@@ -296,8 +296,22 @@ span{
     background: #e0e0e0;
     box-shadow: 20px 20px 60px #bebebe,
                   -20px -20px 60px #ffffff;
+    padding: 20px;
    }
 
+.p-h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: blueviolet;
+}
+
+p.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
 /*body*/
 
 
