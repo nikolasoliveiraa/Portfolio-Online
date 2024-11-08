@@ -311,14 +311,12 @@ span{
     padding: 20px;
    }
 
-   .card img{
+ .p-img{
     max-width: 15vw;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 70px;
-    padding-left: 50px;
-   }
+ }
 
 .p-h1{
     display: flex;
