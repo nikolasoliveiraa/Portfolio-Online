@@ -150,7 +150,7 @@ span{
 
 .home-img img{
     position: relative;
-    max-width: 50vw;
+    max-width: 30vw;
     border-radius: 50%;
     cursor: pointer;
     transition: 0.2s linear;
