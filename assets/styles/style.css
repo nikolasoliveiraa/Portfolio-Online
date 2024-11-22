@@ -292,6 +292,22 @@ span{
     justify-content: center;
 }
 
+.galeria-projetos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 300vw;
+    height: 400vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    border: blueviolet;
+}
+
 /*body*/
 
 /*Fotter*/
