@@ -296,32 +296,54 @@ span{
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 30px;
 }
 
 .card{
     width: 20vw;
     height: 30vw;
     padding: 20px;
-    flex-direction: Colum;
+    flex-direction: column;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50px;
-    backgroud-color: #d1d1d1;
+    background-color: #d1d1d1;
 }
 
 .card-titulo{
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    color: blueviolet;
 }
 
 .card-img{
-    max-width:30px;
-    heigth: auto;
+    max-width:20vw;
+    height: auto;
+    padding-bottom: 20px;
 }
 
 .card-content{
-    Color: white;
+    Color: #242424;
 }
+
+.card-btn {
+    margin-top: 10px;
+    position: relative;
+    padding: 10px 22px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: blueviolet;
+    transition: all 0.2s ease;
+  }
+  
+  .card-btn:active {
+    transform: scale(0.96);
+  }
+
+  .card-btn a{
+    color: white;
+  }
 
 /*body*/
 
