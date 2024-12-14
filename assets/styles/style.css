@@ -70,6 +70,10 @@ header{
     display: none;
 }
 
+img.icon{
+    max-width: 20px;
+}
+
 @media screen and (max-width: 730px){
     .nav-bar{
         padding: 1.5rem 4rem;
@@ -92,6 +96,7 @@ header{
         border: none;
         cursor: pointer;
     }
+
 
     .mobile-menu ul{
         display: flex;
