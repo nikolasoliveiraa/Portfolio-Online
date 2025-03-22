@@ -611,6 +611,12 @@ footer {
     .card {
         width: 100%; /* Ajusta a largura dos cards */
     }
+
+    .social-icons {
+        display: flex;
+        align-items: center;
+        gap: 1rem; /* Espaçamento entre os ícones */
+    }
 }
 
 @media (max-width: 480px) {
@@ -660,5 +666,28 @@ footer {
     .btn {
         font-size: 1rem;
         padding: 0.5rem 1.5rem;
+    }
+}
+
+.desktop-only {
+    display: block;
+}
+
+.mobile-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: mediumseagreen; /* Cor visível para o ícone */
+}
+
+.mobile-icon button:hover {
+    color: white; /* Cor ao passar o mouse */
+    transition: 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+    .desktop-only {
+        display: none; /* Oculta a logo em dispositivos móveis */
     }
 }
