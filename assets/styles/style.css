@@ -8,18 +8,23 @@
     
 }
 
-body{
-    background-color: whitesmoke;
+body {
+    background-color: #121212; /* Fundo escuro */
+    color: #e0e0e0; /* Texto claro para contraste */
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Ajuste conforme a altura do header */
 }
 
 /*Header*/
 
-header{
-    width: auto;
-    background-color: #24252a;
-    box-shadow: 0px 3px 10px #464646;
+header {
+    width: 100%;
+    background-color: #1e1e1e; /* Fundo escuro para o header */
+    box-shadow: 0px 3px 10px #000000;
+    position: fixed; /* Torna o header fixo */
+    top: 0;
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
 }
 
 .nav-bar{
@@ -35,7 +40,7 @@ header{
 }
 
 .logo h1{
-    color: blueviolet;
+    color: mediumseagreen;
 }
 
 .nav-list{
@@ -96,7 +101,7 @@ section{
 }
 
 span{
-    color: blueviolet;
+    color: mediumseagreen;
 }
 
 .home-content h3{
@@ -133,19 +138,19 @@ span{
     width: 4rem;
     height: 4rem;
     background-color: transparent;
-    border: 0.2rem solid blueviolet;
+    border: 0.2rem solid mediumseagreen;
     font-size: 2rem;
     border-radius: 50%;
     margin: 3rem 1.5rem 3rem 0;
     transition: 0.3s ease;
-    color: blueviolet;
+    color: mediumseagreen;
 }
 
 .social-icons a:hover{
     color: black;
     transform: scale(1.3) translateY(-5px);
-    background-color: blueviolet;
-    box-shadow: 0  0 25px blueviolet;
+    background-color: mediumseagreen;
+    box-shadow: 0  0 25px mediumseagreen;
 }
 
 .btn{
@@ -157,30 +162,57 @@ span{
     color: white;
     letter-spacing: 0.3rem;
     font-weight: 600;
-    border: 2px solid blueviolet;
+    border: 2px solid mediumseagreen;
     transition: 0.3s ease;
     cursor: pointer;
 }
 
 .btn:hover{
     transform: scale3d(1.03);
-    background-color: blueviolet;
+    background-color: mediumseagreen;
     color: black;
-    box-shadow: 0 0 25px blueviolet;
+    box-shadow: 0 0 25px mediumseagreen;
 }
 
 #projetos{
-    padding-top: 20px;
+    padding-top: 2rem; /* Reduz o espaçamento acima da seção Projetos */
 }
 
+.projetos-content {
+    display: grid; /* Altere para grid para melhor alinhamento */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Ajusta dinamicamente o número de colunas */
+    gap: 2rem; /* Espaçamento entre os cards */
+    justify-items: center; /* Centraliza os cards horizontalmente */
+    align-items: stretch; /* Garante que todos os cards tenham a mesma altura */
+}
 
-.projetos-content{
+.card{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
+    flex-direction: column;
+    justify-content: space-between; /* Distribui o conteúdo uniformemente */
+    align-items: center; /* Centraliza horizontalmente */
+    width: 100%; /* Ajusta a largura ao container */
+    max-width: 300px; /* Define uma largura máxima */
+    min-height: 38rem; /* Define uma altura mínima */
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-sizing: border-box; /* Inclui padding no tamanho total */
 }
 
+.card-img img {
+    max-width: 100%; /* Ajusta a imagem à largura do card */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.card-desc {
+    flex-grow: 1; /* Faz o texto ocupar o espaço restante */
+    text-align: justify; /* Justifica o texto */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    padding: 1rem 0; /* Espaçamento interno */
+}
 
 #projetos h1{
     font-size: 3rem;
@@ -188,15 +220,8 @@ span{
     line-height: 1.3;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding-bottom: 100px;
-}
-
-.card{
-    width: 30rem;
-    height: 38rem;
-    border-radius: 20px;
-    background-color: #cbcbce;
 }
 
 .card-img img{
@@ -223,20 +248,62 @@ span{
     size: 3rem;
     font-weight: 700;
     line-height: 1.3;
+    color: #e0e0e0; /* Texto claro */
 }
 
 .card-desc{
     padding-top: 20px;
     padding-inline: 20px;
+    color: #e0e0e0; /* Texto claro */
+    text-align: justify; /* Justifica o texto */
+    overflow-wrap: break-word; /* Quebra palavras longas */
+    flex-grow: 1; /* Faz o texto ocupar o espaço restante */
     
+}
+
+.Habilidades {
+    margin-bottom: 2rem; /* Reduz o espaçamento abaixo da seção Habilidades */
+}
+
+.Habilidades h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-bottom: 100px;
+}
+
+.habilidades-content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Cria quatro colunas */
+    justify-content: center;
+    align-items: center;
+    gap: 120px 50px; /* Espaçamento entre colunas e fileiras */
+    margin-top: 20px;
+}
+
+.habilidade-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.habilidade-item i {
+    font-size: 5rem; /* Aumenta o tamanho dos ícones */
+    margin-bottom: 10px;
+    color: mediumseagreen; /* Ícones verdes */
 }
 
 /*body*/
 
 /*Fotter*/
 
-footer{
-    background-color: #24252a;
+footer {
+    background-color: #1e1e1e; /* Fundo escuro para o footer */
 }
 .footerContainer{
     padding: 30px 30px 20px ;   
@@ -255,12 +322,12 @@ footer{
 }
 .socialIcons a i{
     font-size: 2em;
-    color: blueviolet;
+    color: mediumseagreen;
     opacity: 0,9;
 }
 
 .socialIcons a:hover{
-    background-color: blueviolet;
+    background-color: mediumseagreen;
     transition: 0.5s;
 }
 .socialIcons a:hover i{
@@ -268,23 +335,22 @@ footer{
     transition: 0.5s;
 }
 
-.footerBottom{
-    background-color: #24252a;
+.footerBottom {
+    background-color: #1e1e1e; /* Fundo escuro para o footer */
     padding: 20px;
     text-align: center;
 }
-.footerBottom p{
-    color: white;
+.footerBottom p {
+    color: #e0e0e0; /* Texto claro no footer */
 }
-.designer{
-    color: blueviolet;
+.designer {
+    color: mediumseagreen; /* Mantém o verde agradável */
     opacity: 0.7;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 0px 5px;
 }
-
 
 /*Media queries/Resposividade*/
 
@@ -331,7 +397,7 @@ footer{
 
 @keyframes cursor{
     to{
-        border-left: 3px solid blueviolet;
+        border-left: 3px solid mediumseagreen;
     }
 }
 
@@ -397,7 +463,7 @@ footer{
     color: white;
     letter-spacing: 0.3rem;
     font-weight: 600;
-    border: 2px solid blueviolet;
+    border: 2px solid mediumseagreen;
     transition: 0.3s ease;
     cursor: pointer;
     }
@@ -491,5 +557,108 @@ footer{
     .socialIcons a{
         padding: 8px;
         margin: 4px;
+    }
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 1024px) {
+    .nav-bar {
+        padding: 1.5rem 2rem;
+    }
+
+    #home {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-img img {
+        max-width: 15rem;
+    }
+
+    .habilidades-content {
+        grid-template-columns: repeat(3, 1fr); /* Ajusta para 3 colunas */
+        gap: 80px 40px;
+    }
+
+    .projetos-content {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 colunas */
+        gap: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .habilidades-content {
+        grid-template-columns: repeat(2, 1fr); /* Ajusta para 2 colunas */
+    }
+
+    .projetos-content {
+        grid-template-columns: 1fr; /* Ajusta para 1 coluna */
+    }
+
+    .card {
+        width: 100%; /* Ajusta a largura dos cards */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+    }
+
+    .home-img img {
+        max-width: 10rem;
+    }
+
+    .habilidades-content {
+        grid-template-columns: 1fr; /* Ajusta para 1 coluna */
+    }
+
+    .social-icons a {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .social-icons a {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.5rem 1.5rem;
     }
 }
