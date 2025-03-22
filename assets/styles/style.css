@@ -92,6 +92,21 @@ section{
     gap: 8rem;
     padding-top: 20px;
     padding-bottom: 20px;
+    background: url('/assets/img/Nk-dev.png') no-repeat center center fixed; /* Corrige o caminho da imagem */
+    background-size: cover; /* Ajusta a imagem para cobrir toda a área */
+    position: relative; /* Necessário para o efeito parallax */
+    z-index: 1;
+}
+
+#home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Aumenta a opacidade para escurecer mais */
+    z-index: -1; /* Garante que a sobreposição fique atrás do conteúdo */
 }
 
 .home-content h1{
@@ -114,21 +129,8 @@ span{
     font-size: 1.6rem;
 }
 
-.home-img{
-    border-radius: 50%;
-}
-
-.home-img img{
-    position: relative;
-    max-width: 20vw;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.2s linear;
-}
-
-.home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
+.home-img {
+    display: none; /* Remove a exibição da imagem original */
 }
 
 .social-icons a{
@@ -604,7 +606,7 @@ footer {
 
 @media (max-width: 768px) {
     .nav-bar {
-        flex-direction: column;
+        flex-direction: flex;
         align-items: center;
     }
 
@@ -624,6 +626,18 @@ footer {
         display: flex;
         align-items: center;
         gap: 1rem; /* Espaçamento entre os ícones */
+    }
+
+    #home {
+        background: none; /* Remove a imagem de fundo em dispositivos móveis */
+    }
+
+    #home::before {
+        display: none; /* Remove a sobreposição escura */
+    }
+
+    .home-img {
+        display: none; /* Remove a imagem da home */
     }
 }
 
@@ -673,6 +687,72 @@ footer {
 
     .btn {
         font-size: 1rem;
+        padding: 0.5rem 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    #home {
+        flex-direction: column; /* Alinha os elementos verticalmente */
+        gap: 4rem; /* Reduz o espaçamento entre os elementos */
+        padding: 4rem 2rem; /* Ajusta o padding para telas menores */
+    }
+
+    .home-content h1 {
+        font-size: 4rem; /* Reduz o tamanho do título */
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem; /* Reduz o tamanho do subtítulo */
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        padding: 3rem 1.5rem; /* Ajusta o padding para dispositivos menores */
+    }
+
+    .home-content h1 {
+        font-size: 3rem; /* Ajusta o tamanho do título */
+    }
+
+    .home-content h3 {
+        font-size: 2rem; /* Ajusta o tamanho do subtítulo */
+    }
+
+    .social-icons a {
+        width: 3rem; /* Reduz o tamanho dos ícones sociais */
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 1.2rem; /* Ajusta o tamanho do botão */
+        padding: 0.8rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #home {
+        padding: 2rem 1rem; /* Ajusta o padding para telas muito pequenas */
+    }
+
+    .home-content h1 {
+        font-size: 2rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem; /* Reduz ainda mais o tamanho do subtítulo */
+    }
+
+    .social-icons a {
+        width: 2.5rem; /* Ajusta o tamanho dos ícones sociais */
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1rem; /* Ajusta o tamanho do botão */
         padding: 0.5rem 1.5rem;
     }
 }
