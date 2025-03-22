@@ -261,6 +261,14 @@ span{
     
 }
 
+.card .btn {
+    width: auto; /* Ajusta a largura ao conteúdo */
+    padding: 0.8rem 1.5rem; /* Reduz o padding para um tamanho mais proporcional */
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte */
+    margin-top: 1rem; /* Adiciona espaçamento acima do botão */
+    align-self: center; /* Centraliza o botão no card */
+}
+
 .Habilidades {
     margin-bottom: 2rem; /* Reduz o espaçamento abaixo da seção Habilidades */
 }
